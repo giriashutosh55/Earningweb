@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DailyEarn - Wallet</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="header">
+        <h2>My Wallet</h2>
+    </div>
+
+    <div class="container" style="margin-top: 16px;">
+        
+        <!-- Balance Card -->
+        <div class="card text-center" style="background: linear-gradient(135deg, var(--green), #059669); color: white;">
+            <p style="opacity: 0.9;">Available Balance</p>
+            <h1 style="color: white; margin: 8px 0;"><span id="total-coins">0</span> 💰</h1>
+            <p class="badge" style="background: rgba(255,255,255,0.2); color:white; display:inline-block;">≈ ₹<span id="total-inr">0.00</span> INR</p>
+            
+            <a href="withdraw.html" class="btn" style="background: white; color: var(--green); margin-top: 16px;">Withdraw Now</a>
+        </div>
+
+        <h3>Transaction History</h3>
+        
+        <div class="card" id="tx-list" style="padding: 0; background: transparent; box-shadow: none;">
+            <!-- Render via JS -->
+            <p class="text-center text-muted mt-2">Loading transactions...</p>
+        </div>
+
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div id="bottom-nav" class="bottom-nav"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/wallet.js"></script>
+</body>
+</html>

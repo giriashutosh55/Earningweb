@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DailyEarn - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="header">
+        <div>
+            <h2>DailyEarn</h2>
+            <p class="text-muted" style="color: rgba(255,255,255,0.8);">Welcome, <span id="user-name">User</span></p>
+        </div>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="container" style="margin-top: 16px;">
+        
+        <!-- Balance Card -->
+        <div class="card text-center" style="background: linear-gradient(135deg, var(--primary), var(--primary-hover)); color: white;">
+            <p style="opacity: 0.9;">Total Balance</p>
+            <h1 style="color: white; margin: 8px 0;"><span id="total-coins">0</span> 💰</h1>
+            <p class="badge" style="background: rgba(255,255,255,0.2); color:white; display:inline-block;">≈ ₹<span id="total-inr">0.00</span> INR</p>
+        </div>
+
+        <!-- Daily Check-in Card -->
+        <div class="card text-center">
+            <h3>Daily Check-in</h3>
+            <p class="text-muted mt-1 mb-2">Earn 5 coins daily, 15 coins on 7th day!</p>
+            <button id="checkin-btn" class="btn btn-green">Check In Today <span class="badge" style="background: white; color: var(--green);">+5</span></button>
+            <p id="checkin-status" class="text-muted mt-2" style="display: none;">Already checked in ✓</p>
+        </div>
+
+        <!-- Stats Overview -->
+        <div style="display: flex; gap: 16px; margin-bottom: 16px;">
+            <div class="card text-center" style="flex: 1; margin: 0;">
+                <p class="text-muted">Today's Earn</p>
+                <h3 class="text-primary">+<span id="today-earn">0</span></h3>
+            </div>
+            <div class="card text-center" style="flex: 1; margin: 0;">
+                <p class="text-muted">Ads Watched</p>
+                <h3 class="text-primary"><span id="today-ads">0</span>/20</h3>
+            </div>
+        </div>
+
+        <div class="card text-center">
+            <a href="ads.html" class="btn mb-2">Watch Video Ads →</a>
+            <a href="wallet.html" class="btn" style="background: var(--white); color: var(--primary); border: 1px solid var(--primary);">Open Wallet →</a>
+        </div>
+
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div id="bottom-nav" class="bottom-nav"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
